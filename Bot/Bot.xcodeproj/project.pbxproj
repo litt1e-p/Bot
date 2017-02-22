@@ -39,6 +39,8 @@
 		0433AD8A1E55A54C00F03ABC /* BMSongsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0433AD891E55A54C00F03ABC /* BMSongsController.m */; };
 		0433AD911E56D0E500F03ABC /* BMBaseStaticDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 0433AD901E56D0E500F03ABC /* BMBaseStaticDTO.m */; };
 		0433AD941E56D10E00F03ABC /* BMIPodPlaylistDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 0433AD931E56D10E00F03ABC /* BMIPodPlaylistDTO.m */; };
+		0433AD991E5D974100F03ABC /* BMBaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0433AD981E5D974100F03ABC /* BMBaseViewModel.m */; };
+		0433AD9C1E5D975900F03ABC /* BMIPodPlaylistViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0433AD9B1E5D975900F03ABC /* BMIPodPlaylistViewModel.m */; };
 		10E27CE7E8D8C8F85C3FB83B /* libPods-Bot.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AB550FC4402DCA747E878D5 /* libPods-Bot.a */; };
 /* End PBXBuildFile section */
 
@@ -110,6 +112,10 @@
 		0433AD901E56D0E500F03ABC /* BMBaseStaticDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMBaseStaticDTO.m; sourceTree = "<group>"; };
 		0433AD921E56D10E00F03ABC /* BMIPodPlaylistDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMIPodPlaylistDTO.h; sourceTree = "<group>"; };
 		0433AD931E56D10E00F03ABC /* BMIPodPlaylistDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMIPodPlaylistDTO.m; sourceTree = "<group>"; };
+		0433AD971E5D974100F03ABC /* BMBaseViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMBaseViewModel.h; sourceTree = "<group>"; };
+		0433AD981E5D974100F03ABC /* BMBaseViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMBaseViewModel.m; sourceTree = "<group>"; };
+		0433AD9A1E5D975900F03ABC /* BMIPodPlaylistViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMIPodPlaylistViewModel.h; sourceTree = "<group>"; };
+		0433AD9B1E5D975900F03ABC /* BMIPodPlaylistViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMIPodPlaylistViewModel.m; sourceTree = "<group>"; };
 		043AFCB3DF266ABB00985C22 /* Pods-Bot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bot.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bot/Pods-Bot.release.xcconfig"; sourceTree = "<group>"; };
 		0BC1B3A3E8BF8FE25571FCB8 /* Pods-Bot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bot/Pods-Bot.debug.xcconfig"; sourceTree = "<group>"; };
 		5AB550FC4402DCA747E878D5 /* libPods-Bot.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Bot.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -283,6 +289,7 @@
 		0433AD4E1E5556BA00F03ABC /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				0433AD961E5D973400F03ABC /* ViewModel */,
 				0433AD541E5557B500F03ABC /* View */,
 				0433AD531E5557B000F03ABC /* Model */,
 				0433AD521E5557AC00F03ABC /* Control */,
@@ -360,6 +367,7 @@
 		0433AD621E55605100F03ABC /* Playlists */ = {
 			isa = PBXGroup;
 			children = (
+				0433AD951E5D972000F03ABC /* ViewModel */,
 				0433AD8B1E56D09100F03ABC /* Model */,
 				0433AD7B1E55A3C500F03ABC /* Control */,
 			);
@@ -456,6 +464,24 @@
 				0433AD931E56D10E00F03ABC /* BMIPodPlaylistDTO.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		0433AD951E5D972000F03ABC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0433AD9A1E5D975900F03ABC /* BMIPodPlaylistViewModel.h */,
+				0433AD9B1E5D975900F03ABC /* BMIPodPlaylistViewModel.m */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		0433AD961E5D973400F03ABC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0433AD971E5D974100F03ABC /* BMBaseViewModel.h */,
+				0433AD981E5D974100F03ABC /* BMBaseViewModel.m */,
+			);
+			name = ViewModel;
 			sourceTree = "<group>";
 		};
 		5B61ABD6F06C029C88516576 /* Frameworks */ = {
@@ -605,11 +631,13 @@
 				0433AD361E55553800F03ABC /* UILabel+Convenient.m in Sources */,
 				0433AD201E55552A00F03ABC /* EPHUD.m in Sources */,
 				0433AD7A1E55998600F03ABC /* BMBarBtnItem.m in Sources */,
+				0433AD991E5D974100F03ABC /* BMBaseViewModel.m in Sources */,
 				0433AD841E55A53600F03ABC /* BMArtistsController.m in Sources */,
 				0433AD471E55554000F03ABC /* UIColor+Extension.m in Sources */,
 				0433AD491E55554000F03ABC /* UIImage+Render.m in Sources */,
 				0433AD341E55553800F03ABC /* UIButton+Convenient.m in Sources */,
 				0433AD871E55A54200F03ABC /* BMAlbumsController.m in Sources */,
+				0433AD9C1E5D975900F03ABC /* BMIPodPlaylistViewModel.m in Sources */,
 				0433AD511E5556DB00F03ABC /* BMVerticalBtn.m in Sources */,
 				0433AD711E557C8600F03ABC /* BMSearchController.m in Sources */,
 				0433AD911E56D0E500F03ABC /* BMBaseStaticDTO.m in Sources */,

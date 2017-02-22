@@ -9,7 +9,7 @@
 #import "BMPlaylistsController.h"
 #import <MediaPlayer/MediaPlayer.h>
 
-@interface BMPlaylistsController ()
+@interface BMPlaylistsController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSArray *items;
