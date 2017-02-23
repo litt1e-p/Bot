@@ -10,4 +10,9 @@
 
 @implementation BMIPodPlaylistViewModel
 
+- (void)fetchPlaylists
+{
+    
+}
+
 @end

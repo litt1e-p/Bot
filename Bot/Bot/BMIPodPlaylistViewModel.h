@@ -10,4 +10,7 @@
 
 @interface BMIPodPlaylistViewModel : BMBaseViewModel
 
+@property (nonatomic, strong) NSArray *playlists;
+- (void)fetchPlaylists;
+
 @end
