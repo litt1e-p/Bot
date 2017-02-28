@@ -61,8 +61,8 @@ fprintf(stderr,"\n%s 📌%s🎈%s\n", [str UTF8String], __FUNCTION__, [[NSString
 
 #define KeyWindow [UIApplication sharedApplication].keyWindow
 
-#define kAppTintColorName 0xF7C1D9
-#define kAppTintDarkerColorName 0xEE5BA0
+#define kAppTintColorName 0xF8A9CC
+#define kAppTintDarkerColorName 0xF78BBB
 #define kAppTintColor HEX_COLOR(kAppTintColorName)
 #define kAppTintDarkerColor HEX_COLOR(kAppTintDarkerColorName)
 #define kAppViewTintBgColor HEX_COLOR(0xEBF0F6)

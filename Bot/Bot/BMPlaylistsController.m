@@ -7,29 +7,47 @@
 //
 
 #import "BMPlaylistsController.h"
-#import <MediaPlayer/MediaPlayer.h>
+#import "BMMacro.h"
+#import "BMIPodPlaylistViewModel.h"
+#import "BMIPodPlaylistCell.h"
 
 @interface BMPlaylistsController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSArray *items;
+@property (nonatomic, strong) BMIPodPlaylistViewModel *viewModel;
 
 @end
 
 @implementation BMPlaylistsController
 
-static NSString *const kBMPlaylistsControllerID = @"kBMPlaylistsControllerID";
+static NSString *const kBMIPodPlaylistCellID = @"kBMIPodPlaylistCellID";
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     [self initViews];
+    [self initViewModel];
+}
+
+- (void)initViewModel
+{
+    @weakify(self);
+    [RACObserve(self.viewModel, playlists) subscribeNext:^(NSArray *x) {
+        @strongify(self);
+        if (x) {
+            self.items = [x copy];
+            [self.tableView reloadData];
+        }
+    }]; 
+    [self.viewModel fetchPlaylists];
 }
 
 - (void)initViews
 {
     [self.view addSubview:self.tableView];
-    NSLog(@"ooo: %@", self.items);
+    [self.tableView registerClass:[BMIPodPlaylistCell class] forCellReuseIdentifier:kBMIPodPlaylistCellID];
+    self.tableView.tableFooterView = [[UIView alloc] init];
 }
 
 #pragma mark - UITableView Delegate 📌
@@ -41,7 +59,7 @@ static NSString *const kBMPlaylistsControllerID = @"kBMPlaylistsControllerID";
 #pragma mark - UITableView DataSource 📌
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -51,19 +69,28 @@ static NSString *const kBMPlaylistsControllerID = @"kBMPlaylistsControllerID";
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 44;
+    return ScaleH(120);
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kBMPlaylistsControllerID forIndexPath:indexPath];
+    BMIPodPlaylistCell *cell = [tableView dequeueReusableCellWithIdentifier:kBMIPodPlaylistCellID forIndexPath:indexPath];
+    [cell assignCellWithDTO:self.items[indexPath.row]];
     return cell;
+}
+
+- (BMIPodPlaylistViewModel *)viewModel
+{
+    if (!_viewModel) {
+        _viewModel = [[BMIPodPlaylistViewModel alloc] init];
+    }
+    return _viewModel;
 }
 
 - (NSArray *)items
 {
     if (!_items) {
-        _items = [[MPMediaQuery playlistsQuery] collections];
+        _items = [[NSArray alloc] init];
     }
     return _items;
 }
@@ -71,8 +98,8 @@ static NSString *const kBMPlaylistsControllerID = @"kBMPlaylistsControllerID";
 - (UITableView *)tableView
 {
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
-        _tableView.delegate = self;
+        _tableView            = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, self.view.bounds.size.height-64-30)];
+        _tableView.delegate   = self;
         _tableView.dataSource = self;
     }
     return _tableView;

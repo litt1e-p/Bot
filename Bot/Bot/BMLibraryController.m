@@ -62,11 +62,11 @@
             break;
             
         case 2:
-            return [[BMAlbumsController alloc] init];
+            return [[BMArtistsController alloc] init];
             break;
             
         case 3:
-            return [[BMArtistsController alloc] init];
+            return [[BMAlbumsController alloc] init];
             break;
             
         default:

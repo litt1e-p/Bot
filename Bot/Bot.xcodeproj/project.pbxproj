@@ -41,6 +41,18 @@
 		0433AD941E56D10E00F03ABC /* BMIPodPlaylistDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 0433AD931E56D10E00F03ABC /* BMIPodPlaylistDTO.m */; };
 		0433AD991E5D974100F03ABC /* BMBaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0433AD981E5D974100F03ABC /* BMBaseViewModel.m */; };
 		0433AD9C1E5D975900F03ABC /* BMIPodPlaylistViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0433AD9B1E5D975900F03ABC /* BMIPodPlaylistViewModel.m */; };
+		0433ADA71E601CC000F03ABC /* BMBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0433ADA61E601CC000F03ABC /* BMBaseTableViewCell.m */; };
+		0433ADAA1E601CD800F03ABC /* BMIPodPlaylistCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0433ADA91E601CD800F03ABC /* BMIPodPlaylistCell.m */; };
+		0433ADB01E6025CE00F03ABC /* BMIPodArtistsDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 0433ADAF1E6025CE00F03ABC /* BMIPodArtistsDTO.m */; };
+		0433ADB31E60269800F03ABC /* BMIPodArtistsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0433ADB21E60269800F03ABC /* BMIPodArtistsViewModel.m */; };
+		0433ADB61E602AF900F03ABC /* BMIPodArtistsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0433ADB51E602AF900F03ABC /* BMIPodArtistsCell.m */; };
+		0433ADBC1E603C7800F03ABC /* BMIPodAlbumsDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 0433ADBB1E603C7800F03ABC /* BMIPodAlbumsDTO.m */; };
+		0433ADBF1E603CC100F03ABC /* BMIPodAlbumsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0433ADBE1E603CC100F03ABC /* BMIPodAlbumsViewModel.m */; };
+		0433ADC21E603DE300F03ABC /* BMIPodAlbumsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0433ADC11E603DE300F03ABC /* BMIPodAlbumsCell.m */; };
+		0433ADC61E63C9BE00F03ABC /* BMFPS.m in Sources */ = {isa = PBXBuildFile; fileRef = 0433ADC51E63C9BE00F03ABC /* BMFPS.m */; };
+		0433ADCC1E63F36100F03ABC /* BMIPodSongsDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 0433ADCB1E63F36100F03ABC /* BMIPodSongsDTO.m */; };
+		0433ADCF1E640A5300F03ABC /* BMIPodSongsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0433ADCE1E640A5300F03ABC /* BMIPodSongsViewModel.m */; };
+		0433ADD21E64154000F03ABC /* BMIPodSongsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0433ADD11E64154000F03ABC /* BMIPodSongsCell.m */; };
 		10E27CE7E8D8C8F85C3FB83B /* libPods-Bot.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AB550FC4402DCA747E878D5 /* libPods-Bot.a */; };
 /* End PBXBuildFile section */
 
@@ -116,6 +128,30 @@
 		0433AD981E5D974100F03ABC /* BMBaseViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMBaseViewModel.m; sourceTree = "<group>"; };
 		0433AD9A1E5D975900F03ABC /* BMIPodPlaylistViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMIPodPlaylistViewModel.h; sourceTree = "<group>"; };
 		0433AD9B1E5D975900F03ABC /* BMIPodPlaylistViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMIPodPlaylistViewModel.m; sourceTree = "<group>"; };
+		0433ADA51E601CC000F03ABC /* BMBaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMBaseTableViewCell.h; sourceTree = "<group>"; };
+		0433ADA61E601CC000F03ABC /* BMBaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMBaseTableViewCell.m; sourceTree = "<group>"; };
+		0433ADA81E601CD800F03ABC /* BMIPodPlaylistCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMIPodPlaylistCell.h; sourceTree = "<group>"; };
+		0433ADA91E601CD800F03ABC /* BMIPodPlaylistCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMIPodPlaylistCell.m; sourceTree = "<group>"; };
+		0433ADAE1E6025CE00F03ABC /* BMIPodArtistsDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMIPodArtistsDTO.h; sourceTree = "<group>"; };
+		0433ADAF1E6025CE00F03ABC /* BMIPodArtistsDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMIPodArtistsDTO.m; sourceTree = "<group>"; };
+		0433ADB11E60269800F03ABC /* BMIPodArtistsViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMIPodArtistsViewModel.h; sourceTree = "<group>"; };
+		0433ADB21E60269800F03ABC /* BMIPodArtistsViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMIPodArtistsViewModel.m; sourceTree = "<group>"; };
+		0433ADB41E602AF900F03ABC /* BMIPodArtistsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMIPodArtistsCell.h; sourceTree = "<group>"; };
+		0433ADB51E602AF900F03ABC /* BMIPodArtistsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMIPodArtistsCell.m; sourceTree = "<group>"; };
+		0433ADBA1E603C7800F03ABC /* BMIPodAlbumsDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMIPodAlbumsDTO.h; sourceTree = "<group>"; };
+		0433ADBB1E603C7800F03ABC /* BMIPodAlbumsDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMIPodAlbumsDTO.m; sourceTree = "<group>"; };
+		0433ADBD1E603CC100F03ABC /* BMIPodAlbumsViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMIPodAlbumsViewModel.h; sourceTree = "<group>"; };
+		0433ADBE1E603CC100F03ABC /* BMIPodAlbumsViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMIPodAlbumsViewModel.m; sourceTree = "<group>"; };
+		0433ADC01E603DE300F03ABC /* BMIPodAlbumsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMIPodAlbumsCell.h; sourceTree = "<group>"; };
+		0433ADC11E603DE300F03ABC /* BMIPodAlbumsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMIPodAlbumsCell.m; sourceTree = "<group>"; };
+		0433ADC41E63C9BE00F03ABC /* BMFPS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMFPS.h; sourceTree = "<group>"; };
+		0433ADC51E63C9BE00F03ABC /* BMFPS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMFPS.m; sourceTree = "<group>"; };
+		0433ADCA1E63F36100F03ABC /* BMIPodSongsDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMIPodSongsDTO.h; sourceTree = "<group>"; };
+		0433ADCB1E63F36100F03ABC /* BMIPodSongsDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMIPodSongsDTO.m; sourceTree = "<group>"; };
+		0433ADCD1E640A5300F03ABC /* BMIPodSongsViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMIPodSongsViewModel.h; sourceTree = "<group>"; };
+		0433ADCE1E640A5300F03ABC /* BMIPodSongsViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMIPodSongsViewModel.m; sourceTree = "<group>"; };
+		0433ADD01E64154000F03ABC /* BMIPodSongsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMIPodSongsCell.h; sourceTree = "<group>"; };
+		0433ADD11E64154000F03ABC /* BMIPodSongsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMIPodSongsCell.m; sourceTree = "<group>"; };
 		043AFCB3DF266ABB00985C22 /* Pods-Bot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bot.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bot/Pods-Bot.release.xcconfig"; sourceTree = "<group>"; };
 		0BC1B3A3E8BF8FE25571FCB8 /* Pods-Bot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bot/Pods-Bot.debug.xcconfig"; sourceTree = "<group>"; };
 		5AB550FC4402DCA747E878D5 /* libPods-Bot.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Bot.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -207,6 +243,7 @@
 		0433AD181E55552A00F03ABC /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				0433ADC31E63C9BE00F03ABC /* FPS */,
 				0433AD1C1E55552A00F03ABC /* HUD */,
 			);
 			path = Utility;
@@ -326,6 +363,8 @@
 				0433AD791E55998600F03ABC /* BMBarBtnItem.m */,
 				0433AD4F1E5556DB00F03ABC /* BMVerticalBtn.h */,
 				0433AD501E5556DB00F03ABC /* BMVerticalBtn.m */,
+				0433ADA51E601CC000F03ABC /* BMBaseTableViewCell.h */,
+				0433ADA61E601CC000F03ABC /* BMBaseTableViewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -344,6 +383,9 @@
 			isa = PBXGroup;
 			children = (
 				0433AD7E1E55A3D500F03ABC /* Control */,
+				0433ADC91E63F1F500F03ABC /* Model */,
+				0433ADC81E63F1E800F03ABC /* ViewModel */,
+				0433ADC71E63F1E400F03ABC /* View */,
 			);
 			name = Songs;
 			sourceTree = "<group>";
@@ -352,6 +394,9 @@
 			isa = PBXGroup;
 			children = (
 				0433AD7D1E55A3D000F03ABC /* Control */,
+				0433ADB91E603C1100F03ABC /* Model */,
+				0433ADB81E603C0A00F03ABC /* ViewModel */,
+				0433ADB71E603C0700F03ABC /* View */,
 			);
 			name = Albums;
 			sourceTree = "<group>";
@@ -360,6 +405,9 @@
 			isa = PBXGroup;
 			children = (
 				0433AD7C1E55A3CD00F03ABC /* Control */,
+				0433ADAD1E6025A000F03ABC /* Model */,
+				0433ADAC1E60259900F03ABC /* ViewModel */,
+				0433ADAB1E60259400F03ABC /* View */,
 			);
 			name = Artists;
 			sourceTree = "<group>";
@@ -367,9 +415,10 @@
 		0433AD621E55605100F03ABC /* Playlists */ = {
 			isa = PBXGroup;
 			children = (
+				0433AD7B1E55A3C500F03ABC /* Control */,
+				0433ADA41E601CA600F03ABC /* View */,
 				0433AD951E5D972000F03ABC /* ViewModel */,
 				0433AD8B1E56D09100F03ABC /* Model */,
-				0433AD7B1E55A3C500F03ABC /* Control */,
 			);
 			name = Playlists;
 			sourceTree = "<group>";
@@ -482,6 +531,105 @@
 				0433AD981E5D974100F03ABC /* BMBaseViewModel.m */,
 			);
 			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		0433ADA41E601CA600F03ABC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0433ADA81E601CD800F03ABC /* BMIPodPlaylistCell.h */,
+				0433ADA91E601CD800F03ABC /* BMIPodPlaylistCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		0433ADAB1E60259400F03ABC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0433ADB41E602AF900F03ABC /* BMIPodArtistsCell.h */,
+				0433ADB51E602AF900F03ABC /* BMIPodArtistsCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		0433ADAC1E60259900F03ABC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0433ADB11E60269800F03ABC /* BMIPodArtistsViewModel.h */,
+				0433ADB21E60269800F03ABC /* BMIPodArtistsViewModel.m */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		0433ADAD1E6025A000F03ABC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0433ADAE1E6025CE00F03ABC /* BMIPodArtistsDTO.h */,
+				0433ADAF1E6025CE00F03ABC /* BMIPodArtistsDTO.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		0433ADB71E603C0700F03ABC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0433ADC01E603DE300F03ABC /* BMIPodAlbumsCell.h */,
+				0433ADC11E603DE300F03ABC /* BMIPodAlbumsCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		0433ADB81E603C0A00F03ABC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0433ADBD1E603CC100F03ABC /* BMIPodAlbumsViewModel.h */,
+				0433ADBE1E603CC100F03ABC /* BMIPodAlbumsViewModel.m */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		0433ADB91E603C1100F03ABC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0433ADBA1E603C7800F03ABC /* BMIPodAlbumsDTO.h */,
+				0433ADBB1E603C7800F03ABC /* BMIPodAlbumsDTO.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		0433ADC31E63C9BE00F03ABC /* FPS */ = {
+			isa = PBXGroup;
+			children = (
+				0433ADC41E63C9BE00F03ABC /* BMFPS.h */,
+				0433ADC51E63C9BE00F03ABC /* BMFPS.m */,
+			);
+			path = FPS;
+			sourceTree = "<group>";
+		};
+		0433ADC71E63F1E400F03ABC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0433ADD01E64154000F03ABC /* BMIPodSongsCell.h */,
+				0433ADD11E64154000F03ABC /* BMIPodSongsCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		0433ADC81E63F1E800F03ABC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0433ADCD1E640A5300F03ABC /* BMIPodSongsViewModel.h */,
+				0433ADCE1E640A5300F03ABC /* BMIPodSongsViewModel.m */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		0433ADC91E63F1F500F03ABC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0433ADCA1E63F36100F03ABC /* BMIPodSongsDTO.h */,
+				0433ADCB1E63F36100F03ABC /* BMIPodSongsDTO.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		5B61ABD6F06C029C88516576 /* Frameworks */ = {
@@ -630,16 +778,26 @@
 				0433AD381E55553800F03ABC /* UIView+Convenient.m in Sources */,
 				0433AD361E55553800F03ABC /* UILabel+Convenient.m in Sources */,
 				0433AD201E55552A00F03ABC /* EPHUD.m in Sources */,
+				0433ADB61E602AF900F03ABC /* BMIPodArtistsCell.m in Sources */,
+				0433ADC61E63C9BE00F03ABC /* BMFPS.m in Sources */,
 				0433AD7A1E55998600F03ABC /* BMBarBtnItem.m in Sources */,
+				0433ADD21E64154000F03ABC /* BMIPodSongsCell.m in Sources */,
+				0433ADCF1E640A5300F03ABC /* BMIPodSongsViewModel.m in Sources */,
+				0433ADCC1E63F36100F03ABC /* BMIPodSongsDTO.m in Sources */,
 				0433AD991E5D974100F03ABC /* BMBaseViewModel.m in Sources */,
 				0433AD841E55A53600F03ABC /* BMArtistsController.m in Sources */,
 				0433AD471E55554000F03ABC /* UIColor+Extension.m in Sources */,
 				0433AD491E55554000F03ABC /* UIImage+Render.m in Sources */,
+				0433ADC21E603DE300F03ABC /* BMIPodAlbumsCell.m in Sources */,
+				0433ADB01E6025CE00F03ABC /* BMIPodArtistsDTO.m in Sources */,
 				0433AD341E55553800F03ABC /* UIButton+Convenient.m in Sources */,
+				0433ADAA1E601CD800F03ABC /* BMIPodPlaylistCell.m in Sources */,
 				0433AD871E55A54200F03ABC /* BMAlbumsController.m in Sources */,
 				0433AD9C1E5D975900F03ABC /* BMIPodPlaylistViewModel.m in Sources */,
+				0433ADB31E60269800F03ABC /* BMIPodArtistsViewModel.m in Sources */,
 				0433AD511E5556DB00F03ABC /* BMVerticalBtn.m in Sources */,
 				0433AD711E557C8600F03ABC /* BMSearchController.m in Sources */,
+				0433ADBF1E603CC100F03ABC /* BMIPodAlbumsViewModel.m in Sources */,
 				0433AD911E56D0E500F03ABC /* BMBaseStaticDTO.m in Sources */,
 				0433AD5A1E555F1C00F03ABC /* BMWindow.m in Sources */,
 				0433AD6E1E557C5E00F03ABC /* BMLibraryController.m in Sources */,
@@ -651,8 +809,10 @@
 				0433AD391E55553800F03ABC /* UINavigationBar+Awesome.m in Sources */,
 				0433AD811E55A52700F03ABC /* BMPlaylistsController.m in Sources */,
 				0433AD011E553D0800F03ABC /* AppDelegate.m in Sources */,
+				0433ADA71E601CC000F03ABC /* BMBaseTableViewCell.m in Sources */,
 				0433AD571E555DB500F03ABC /* BMBaseController.m in Sources */,
 				0433AD6B1E557C5100F03ABC /* BMMineController.m in Sources */,
+				0433ADBC1E603C7800F03ABC /* BMIPodAlbumsDTO.m in Sources */,
 				0433AD4A1E55554000F03ABC /* UIView+Extension.m in Sources */,
 				0433ACFE1E553D0800F03ABC /* main.m in Sources */,
 				0433AD8A1E55A54C00F03ABC /* BMSongsController.m in Sources */,
@@ -769,6 +929,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = VS22GVZDEV;
+				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = Bot/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -783,6 +944,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = VS22GVZDEV;
+				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = Bot/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

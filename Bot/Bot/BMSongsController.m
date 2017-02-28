@@ -7,31 +7,102 @@
 //
 
 #import "BMSongsController.h"
+#import "BMMacro.h"
+#import "BMIPodSongsCell.h"
+#import "BMIPodSongsViewModel.h"
 
-@interface BMSongsController ()
+@interface BMSongsController ()<UITableViewDelegate, UITableViewDataSource>
+
+@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) NSArray *items;
+@property (nonatomic, strong) BMIPodSongsViewModel *viewModel;
 
 @end
 
 @implementation BMSongsController
 
-- (void)viewDidLoad {
+static NSString *const kBMIPodSongsCellID = @"kBMIPodSongsCellID";
+
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self initViews];
+    [self initViewModel];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)initViewModel
+{
+    @weakify(self);
+    [RACObserve(self.viewModel, songs) subscribeNext:^(NSArray *x) {
+        @strongify(self);
+        if (x) {
+            self.items = [x copy];
+            [self.tableView reloadData];
+        }
+    }];
+    [self.viewModel fetchAllSongs];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)initViews
+{
+    [self.view addSubview:self.tableView];
+    [self.tableView registerClass:[BMIPodSongsCell class] forCellReuseIdentifier:kBMIPodSongsCellID];
+    self.tableView.tableFooterView = [[UIView alloc] init];
 }
-*/
+
+#pragma mark - UITableView Delegate 📌
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+}
+
+#pragma mark - UITableView DataSource 📌
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.items.count;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return ScaleH(120);
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    BMIPodSongsCell *cell = [tableView dequeueReusableCellWithIdentifier:kBMIPodSongsCellID forIndexPath:indexPath];
+    [cell assignCellWithDTO:self.items[indexPath.row]];
+    return cell;
+}
+
+- (BMIPodSongsViewModel *)viewModel
+{
+    if (!_viewModel) {
+        _viewModel = [[BMIPodSongsViewModel alloc] init];
+    }
+    return _viewModel;
+}
+
+- (NSArray *)items
+{
+    if (!_items) {
+        _items = [[NSArray alloc] init];
+    }
+    return _items;
+}
+
+- (UITableView *)tableView
+{
+    if (!_tableView) {
+        _tableView            = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, self.view.bounds.size.height-64-30)];
+        _tableView.delegate   = self;
+        _tableView.dataSource = self;
+    }
+    return _tableView;
+}
 
 @end
