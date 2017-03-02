@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import <RealReachability.h>
+#import "BMHUD.h"
+#import "BMMacro.h"
 
 @interface AppDelegate ()
 
@@ -19,9 +22,48 @@
 {
     self.window = [[BMWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     [self.window makeKeyAndVisible];
+    [self someInitial];
     return YES;
 }
 
+- (void)someInitial
+{
+    [self reachableInit];
+}
+
+- (void)reachableInit
+{
+    [GLobalRealReachability startNotifier];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(networkChanged:)
+                                                 name:kRealReachabilityChangedNotification
+                                               object:nil];
+}
+
+- (void)networkChanged:(NSNotification *)notification
+{
+    RealReachability *reachability = (RealReachability *)notification.object;
+    ReachabilityStatus status      = [reachability currentReachabilityStatus];
+    NSString *desc                 = nil;
+    switch (status) {
+        case RealStatusViaWiFi:
+            desc = Loc(@"当前网络：WiFi");
+            break;
+            
+        case RealStatusViaWWAN:
+            desc = Loc(@"当前网络：蜂窝网络");
+            break;
+            
+        case RealStatusNotReachable:
+            desc = Loc(@"当前无网络连接");
+            break;
+            
+        default:
+            desc = Loc(@"未知网络");
+            break;
+    }
+    [BMHUD showMsg:desc];
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
